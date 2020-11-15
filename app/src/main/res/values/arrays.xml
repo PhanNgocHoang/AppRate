@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="res_type">
+        <item>@string/Grill</item>
+        <item>@string/FastFood</item>
+        <item>@string/Cake</item>
+        <item>@string/Seafood</item>
+        <item>@string/Bbq</item>
+    </string-array>
+    <string name="Grill">Grill</string>
+    <string name="FastFood">FastFood</string>
+    <string name="Cake">Cake</string>
+    <string name="Seafood">Seafood</string>
+    <string name="Bbq">BBQ</string>
+    <string name="Bad">Bad</string>
+    <string name="Normal">Normal</string>
+    <string name="Rather">Rather</string>
+    <string name="Good">Good</string>
+    <string name="Excellent">Excellent</string>
+
+    <string-array name="rate_type">
+        <item>@string/Bad</item>
+        <item>@string/Normal</item>
+        <item>@string/Rather</item>
+        <item>@string/Good</item>
+        <item>@string/Excellent</item>
+    </string-array>
+</resources>
