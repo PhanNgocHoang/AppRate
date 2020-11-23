@@ -16,19 +16,22 @@
     <string name="enter_your_phone">Enter Your Phone</string>
     <string name="enter_restaurant_name">Enter Restaurant Name</string>
     <string name="enter_restaurant_address">Enter Restaurant Address</string>
-    <string name="enter_notes">Enter Restaurant Address</string>
+    <string name="enter_notes">Enter Your Note</string>
     <string name="date_visited">Enter Day visited</string>
     <string name="time_visited">Enter Time visited</string>
+    <string name="price">Enter verage price per person</string>a
 
 
 
-    <string name="your_name_err">Your name not empty and length than more 3 </string>
-    <string name="res_name_err">Restaurant name not empty</string>
-    <string name="phone_err">Your phone not empty and length is 10  </string>
+    <string name="your_name_err">Your name is not valid </string>
+    <string name="res_name_err">Restaurant name is not valid </string>
+    <string name="phone_err">Your phone is not valid  </string>
     <string name="res_address_err">Restaurant address not empty and follow: 20 Park Street</string>
-    <string name="date_err">Date visited not empty and follow: dd/mm/yyyy , example: 30/12/2020 </string>
+    <string name="date_err">Date visited not empty and follow: mm/dd/yyyy , example: 12/30/2020 </string>
     <string name="time_err">Time visited not empty </string>
-
+    <string name="average_price">Average price: $</string>
+    <string name="price_err">Price invalid</string>
+    <string name="Logo">Logo</string>
 
 
 </resources>

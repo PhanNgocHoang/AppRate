@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     EditText res_name;
     EditText notes;
     Button rateBtn;
+    EditText price;
 
     private AwesomeValidation awesomeValidation;
 
@@ -54,16 +55,18 @@ public class MainActivity extends AppCompatActivity {
         res_name = (EditText) findViewById(R.id.editTextRes_name);
         notes = (EditText) findViewById(R.id.editTextNotes);
         rateBtn = (Button) findViewById(R.id.buttonRate);
+        price = (EditText) findViewById(R.id.editTextPrice);
 
 
 
         // adding validation to edit text
-        awesomeValidation.addValidation(this, R.id.editTextOwner, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.your_name_err);
-        awesomeValidation.addValidation(this, R.id.editTextPhone, "^[0-9]{10}$", R.string.phone_err);
+        awesomeValidation.addValidation(this, R.id.editTextOwner, "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$", R.string.your_name_err);
+        awesomeValidation.addValidation(this, R.id.editTextPhone, "(([+][(]?[0-9]{1,3}[)]?)|([(]?[0-9]{4}[)]?))\\s*[)]?[-\\s\\.]?[(]?[0-9]{1,3}[)]?([-\\s\\.]?[0-9]{3})([-\\s\\.]?[0-9]{3,4})", R.string.phone_err);
         awesomeValidation.addValidation(this, R.id.editTextRes_address, "^\\d+\\s[A-z]+\\s[A-z]+", R.string.res_address_err);
-        awesomeValidation.addValidation(this, R.id.editTextRes_name, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.res_name_err);
-        awesomeValidation.addValidation(this, R.id.editTextDate, "^([0-2][0-9]|(3)[0-1])(\\/)(((0)[0-9])|((1)[0-2]))(\\/)\\d{4}$", R.string.date_err);
+        awesomeValidation.addValidation(this, R.id.editTextRes_name, "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$", R.string.res_name_err);
+        awesomeValidation.addValidation(this, R.id.editTextDate, "(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d", R.string.date_err);
         awesomeValidation.addValidation(this, R.id.editTextTime, "^([01]?\\d|2[0-3]):([0-5]\\d):([0-5]\\d)$", R.string.time_err);
+        awesomeValidation.addValidation(this, R.id.editTextPrice, "^\\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$", R.string.price_err);
 
 
         edtDate.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
                 calendar.set(i, i1, i2);
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
                 edtDate.setText(simpleDateFormat.format(calendar.getTime()));
 
             }
