@@ -5,20 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="150dp"
@@ -28,7 +24,6 @@
                 android:layout_marginRight="150dp"
                 android:contentDescription="@string/Logo"
                 app:srcCompat="@drawable/icons" />
-
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="148dp"
@@ -42,7 +37,6 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="50sp" />
-
             <TextView
                 android:id="@+id/textViewOwner"
                 android:layout_width="wrap_content"
@@ -54,7 +48,6 @@
                 android:textAlignment="center"
                 android:textColor="#020202"
                 android:textSize="24sp" />
-
             <EditText
                 android:id="@+id/editTextOwner"
                 android:layout_width="match_parent"
@@ -69,7 +62,6 @@
                 android:ems="10"
                 android:hint="@string/enter_your_name"
                 android:inputType="textPersonName" />
-
             <TextView
                 android:id="@+id/textViewPhone"
                 android:layout_width="wrap_content"
@@ -81,7 +73,6 @@
                 android:textAlignment="center"
                 android:textColor="#020202"
                 android:textSize="24sp" />
-
             <EditText
                 android:id="@+id/editTextPhone"
                 android:layout_width="match_parent"
@@ -96,7 +87,6 @@
                 android:ems="10"
                 android:hint="@string/enter_your_phone"
                 android:inputType="phone" />
-
             <TextView
                 android:id="@+id/textViewRes_name"
                 android:layout_width="wrap_content"
@@ -108,7 +98,6 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
             <EditText
                 android:id="@+id/editTextRes_name"
                 android:layout_width="match_parent"
@@ -122,7 +111,6 @@
                 android:ems="10"
                 android:hint="@string/enter_restaurant_name"
                 android:inputType="textPersonName" />
-
             <TextView
                 android:id="@+id/textViewRes_address"
                 android:layout_width="wrap_content"
@@ -133,7 +121,6 @@
                 android:text="@string/restaurant_address"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
             <EditText
                 android:id="@+id/editTextRes_address"
                 android:layout_width="match_parent"
@@ -148,7 +135,6 @@
                 android:ems="10"
                 android:hint="@string/enter_restaurant_address"
                 android:inputType="textPersonName" />
-
             <TextView
                 android:id="@+id/textViewRes_type"
                 android:layout_width="wrap_content"
@@ -160,7 +146,6 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
             <Spinner
                 android:id="@+id/spinnerRes_type"
                 android:layout_width="match_parent"
@@ -173,7 +158,6 @@
                 android:layout_marginBottom="3dp"
                 android:entries="@array/res_type"
                 android:padding="18dp" />
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
@@ -185,7 +169,6 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
             <EditText
                 android:id="@+id/editTextPrice"
                 android:layout_width="match_parent"
@@ -199,8 +182,6 @@
                 android:ems="10"
                 android:hint="@string/price"
                 android:inputType="number|textPersonName" />
-
-
             <TextView
                 android:id="@+id/textViewService_rate"
                 android:layout_width="wrap_content"
@@ -212,7 +193,6 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
             <Spinner
                 android:id="@+id/spinnerService_rate"
                 android:layout_width="match_parent"
@@ -225,7 +205,6 @@
                 android:layout_marginBottom="3dp"
                 android:entries="@array/rate_type"
                 android:padding="18dp" />
-
             <TextView
                 android:id="@+id/textViewFood_rate"
                 android:layout_width="wrap_content"
@@ -237,7 +216,6 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
             <Spinner
                 android:id="@+id/spinnerFood_rate"
                 android:layout_width="match_parent"
@@ -250,7 +228,6 @@
                 android:layout_marginBottom="3dp"
                 android:entries="@array/rate_type"
                 android:padding="18dp" />
-
             <TextView
                 android:id="@+id/textViewClean_rate"
                 android:layout_width="wrap_content"
@@ -262,7 +239,6 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
             <Spinner
                 android:id="@+id/spinnerClean_rate"
                 android:layout_width="match_parent"
@@ -275,7 +251,6 @@
                 android:layout_marginBottom="2dp"
                 android:entries="@array/rate_type"
                 android:padding="18dp" />
-
             <TextView
                 android:id="@+id/textViewDay_visited"
                 android:layout_width="wrap_content"
@@ -287,7 +262,6 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
             <EditText
                 android:id="@+id/editTextDate"
                 android:layout_width="match_parent"
@@ -302,7 +276,6 @@
                 android:ems="10"
                 android:hint="@string/day_visited"
                 android:inputType="date" />
-
             <EditText
                 android:id="@+id/editTextTime"
                 android:layout_width="match_parent"
@@ -317,7 +290,6 @@
                 android:ems="10"
                 android:hint="@string/time_visited"
                 android:inputType="time" />
-
             <TextView
                 android:id="@+id/textViewNotes"
                 android:layout_width="wrap_content"
@@ -329,7 +301,6 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="24sp" />
-
             <EditText
                 android:id="@+id/editTextNotes"
                 android:layout_width="match_parent"
@@ -346,7 +317,6 @@
                 android:hint="@string/enter_notes"
                 android:inputType="textMultiLine"
                 android:padding="30dp" />
-
             <Button
                 android:id="@+id/buttonRate"
                 android:layout_width="match_parent"
@@ -359,7 +329,6 @@
                 android:text="@string/rate"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp" />
-
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

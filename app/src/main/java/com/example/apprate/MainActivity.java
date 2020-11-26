@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -20,46 +19,19 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-
     EditText edtDate;
     EditText edtTime;
-    Spinner service_rate;
-    Spinner food_rate;
-    Spinner clean_rate;
-    Spinner res_type;
-    EditText owner;
-    EditText owner_phone;
-    EditText res_address;
-    EditText res_name;
-    EditText notes;
     Button rateBtn;
-    EditText price;
-
     private AwesomeValidation awesomeValidation;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         edtDate = (EditText) findViewById(R.id.editTextDate);
         edtTime = (EditText) findViewById(R.id.editTextTime);
-        service_rate = (Spinner) findViewById(R.id.spinnerService_rate);
-        food_rate = (Spinner) findViewById(R.id.spinnerFood_rate);
-        clean_rate = (Spinner) findViewById(R.id.spinnerClean_rate);
-        res_type = (Spinner) findViewById(R.id.spinnerRes_type);
-        owner = (EditText) findViewById(R.id.editTextOwner);
-        owner_phone = (EditText) findViewById(R.id.editTextPhone);
-        res_address = (EditText) findViewById(R.id.editTextRes_address);
-        res_name = (EditText) findViewById(R.id.editTextRes_name);
-        notes = (EditText) findViewById(R.id.editTextNotes);
         rateBtn = (Button) findViewById(R.id.buttonRate);
-        price = (EditText) findViewById(R.id.editTextPrice);
-
-
-
-        // adding validation to edit text
+        // adding validation to edit text using regex
         awesomeValidation.addValidation(this, R.id.editTextOwner, "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$", R.string.your_name_err);
         awesomeValidation.addValidation(this, R.id.editTextPhone, "(([+][(]?[0-9]{1,3}[)]?)|([(]?[0-9]{4}[)]?))\\s*[)]?[-\\s\\.]?[(]?[0-9]{1,3}[)]?([-\\s\\.]?[0-9]{3})([-\\s\\.]?[0-9]{3,4})", R.string.phone_err);
         awesomeValidation.addValidation(this, R.id.editTextRes_address, "^\\d+\\s[A-z]+\\s[A-z]+", R.string.res_address_err);
@@ -67,28 +39,26 @@ public class MainActivity extends AppCompatActivity {
         awesomeValidation.addValidation(this, R.id.editTextDate, "(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d", R.string.date_err);
         awesomeValidation.addValidation(this, R.id.editTextTime, "^([01]?\\d|2[0-3]):([0-5]\\d):([0-5]\\d)$", R.string.time_err);
         awesomeValidation.addValidation(this, R.id.editTextPrice, "^\\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$", R.string.price_err);
-
-
         edtDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    selectDate();
+                    GetDate();
             }
         });
         edtTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                selectTime();
+                GetTime();
             }
         });
         rateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                submitForm();
+                submitFormRated();
             }
         });
     }
-    private  void selectDate(){
+    private  void GetDate(){ // show calendar
         final Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DATE);
         int month = calendar.get(Calendar.MONTH);
@@ -104,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         }, year, month, day);
         datePickerDialog.show();
     }
-    private void selectTime(){
+    private void GetTime(){ // show clock
         final Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = calendar.get(Calendar.MINUTE);
@@ -118,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         }, hour, minute, true);
         timePickerDialog.show();
     }
-    private void submitForm(){
+    private void submitFormRated(){ //
         if (awesomeValidation.validate()){
             Toast.makeText(this, "Validattion Successfull", Toast.LENGTH_LONG).show();
         }
